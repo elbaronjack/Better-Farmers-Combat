@@ -19,6 +19,7 @@ import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(MCCourseMod.MOD_ID)
+//Main class of the mod
 public class MCCourseMod
 {
     public static final String MOD_ID = "mccourse";
