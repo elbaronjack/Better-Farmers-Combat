@@ -1,5 +1,4 @@
 {
-  "parent": "farmersdelight:knife",
   "attributes": {
     "attack_range": 2,
     "two_handed": false,
