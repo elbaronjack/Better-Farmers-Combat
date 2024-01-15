@@ -14,7 +14,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.1-1.19.2'
+version = '1.1-1.18.2'
 group = 'com.baronjack.betterfarmerscombat'
 archivesBaseName = 'betterfarmerscombat'
 
@@ -22,7 +22,7 @@ java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
-    mappings channel: 'parchment', version: '2022.11.27-1.19.2'
+    mappings channel: 'parchment', version: '2022.11.06-1.18.2'
 
     runs {
         client {
@@ -79,7 +79,7 @@ minecraft {
             args '--mod', 'betterfarmerscombat', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                bettermeleeweapons {
+                betterfarmerscombat {
                     source sourceSets.main
                 }
             }
@@ -101,22 +101,22 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.19.2-43.3.2'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.2.0'
 
     //Better Combat
-    implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2")
-    implementation fg.deobf('curse.maven:Cloth-348521:4633416')
-    implementation fg.deobf('curse.maven:BetterCombat-639842:4534619')
+    implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2+1.18")
+    implementation fg.deobf('curse.maven:Cloth-348521:4973439')
+    implementation fg.deobf('curse.maven:BetterCombat-639842:4428885')
 
     //Farmer's delight + Addons
-    implementation fg.deobf('curse.maven:FarmersDelight-398521:4636013')
-    runtimeOnly fg.deobf('curse.maven:NethersDelight-496394:4731072')
-    runtimeOnly fg.deobf('curse.maven:EndsDelight-662675:4675407')
-    runtimeOnly fg.deobf('curse.maven:Butchercraft-265715:4386164')
+    implementation fg.deobf('curse.maven:FarmersDelight-398521:4679315')
+    //runtimeOnly fg.deobf('curse.maven:NethersDelight-496394:4731072')
+    //runtimeOnly fg.deobf('curse.maven:EndsDelight-662675:4675407')
+    //runtimeOnly fg.deobf('curse.maven:Butchercraft-265715:4386164')
 
     //Only for test
-    runtimeOnly fg.deobf('curse.maven:MoonlightLib-499980:4758015')
-    runtimeOnly fg.deobf('curse.maven:MmmmDummy-225738:4410143')
+    //runtimeOnly fg.deobf('curse.maven:MoonlightLib-499980:4758015')
+    //runtimeOnly fg.deobf('curse.maven:MmmmDummy-225738:4410143')
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
