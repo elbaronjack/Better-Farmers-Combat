@@ -14,7 +14,7 @@ apply plugin: 'org.parchmentmc.librarian.forgegradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.1-1.20.1'
+version = '1.2-1.20.1'
 group = 'com.baronjack.betterfarmerscombat'
 archivesBaseName = 'betterfarmerscombat'
 
@@ -107,12 +107,12 @@ dependencies {
     implementation fg.deobf('curse.maven:PlayerAnim-658587:4587214')
     implementation fg.deobf('curse.maven:Cloth-348521:4633444')
     implementation fg.deobf('curse.maven:BetterCombat-639842:4780843')
-    runtimeOnly fg.deobf('curse.maven:ShieldOverhaul-637870:4766700')
 
     //Farmer's delight + Addons
     implementation fg.deobf('curse.maven:FarmersDelight-398521:4679319')
     runtimeOnly fg.deobf('curse.maven:NethersDelight-496394:4736227')
     runtimeOnly fg.deobf('curse.maven:EndsDelight-662675:4678069')
+    //runtimeOnly fg.deobf('curse.maven:ButchersDelight-551909:5054557'); //Gradle can't download it
 
     //Only for test
     runtimeOnly fg.deobf('curse.maven:MoonlightLib-499980:4800629')
